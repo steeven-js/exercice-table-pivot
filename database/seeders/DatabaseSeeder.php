@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Test',
             'email' => 'admin@test.com',
         ]);
+
+        $this->call([
+            SkuSeeder::class,
+            AttributeSeeder::class,
+            AttributeSkuSeeder::class,
+        ]);
     }
 }
